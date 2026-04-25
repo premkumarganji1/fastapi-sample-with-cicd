@@ -10,3 +10,7 @@ router = APIRouter()
 def create_item(item: Item):
     result = process_item(item)
     return {"message": "Item processed", "data": result}
+
+@router.get("/items")
+def get_item():
+    return {"message": "Hey! It worked"}
